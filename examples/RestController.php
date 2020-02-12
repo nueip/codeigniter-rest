@@ -1,6 +1,6 @@
 <?php
 
-class RestController extends \yidas\rest\Controller
+class RestController extends \nueip\rest\Controller
 {
     /**
      * Action: Index

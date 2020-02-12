@@ -1,6 +1,6 @@
 <?php
 
-namespace yidas\http;
+namespace nueip\http;
 
 use Exception;
 
@@ -10,8 +10,8 @@ use Exception;
  * @author  Nick Tsai <myintaer@gmail.com>
  * @since   1.6.1
  * @example
- *  $response = new yidas\http\Response;
- *  $response->setFormat(yidas\http\Response::FORMAT_JSON);
+ *  $response = new nueip\http\Response;
+ *  $response->setFormat(nueip\http\Response::FORMAT_JSON);
  *  $response->setData(['foo'=>'bar']);
  *  $response->setStatusCode(201, 'Created');
  *  $response->send();

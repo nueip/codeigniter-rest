@@ -8,10 +8,10 @@
 
 CodeIgniter 3 RESTful API Resource Base Controller
 
-[![Latest Stable Version](https://poser.pugx.org/yidas/codeigniter-rest/v/stable?format=flat-square)](https://packagist.org/packages/yidas/codeigniter-rest)
-[![License](https://poser.pugx.org/yidas/codeigniter-rest/license?format=flat-square)](https://packagist.org/packages/yidas/codeigniter-rest)
+[![Latest Stable Version](https://poser.pugx.org/nueip/codeigniter-rest/v/stable?format=flat-square)](https://packagist.org/packages/nueip/codeigniter-rest)
+[![License](https://poser.pugx.org/nueip/codeigniter-rest/license?format=flat-square)](https://packagist.org/packages/nueip/codeigniter-rest)
 
-This RESTful API extension is collected into [yidas/codeigniter-pack](https://github.com/yidas/codeigniter-pack) which is a complete solution for Codeigniter framework.
+This RESTful API extension is collected into [nueip/codeigniter-pack](https://github.com/nueip/codeigniter-pack) which is a complete solution for Codeigniter framework.
 
 Features
 --------
@@ -51,7 +51,7 @@ DEMONSTRATION
 -------------
 
 ```php
-class ApiController extends yidas\rest\Controller
+class ApiController extends nueip\rest\Controller
 {
     public function index()
     {
@@ -119,7 +119,7 @@ INSTALLATION
 
 Run Composer in your Codeigniter project under the folder `\application`:
 
-    composer require yidas/codeigniter-rest
+    composer require nueip/codeigniter-rest
     
 Check Codeigniter `application/config/config.php`:
 
@@ -134,10 +134,10 @@ $config['composer_autoload'] = TRUE;
 CONFIGURATION
 -------------
 
-1. Create a controller to extend `yidas\rest\Controller`, 
+1. Create a controller to extend `nueip\rest\Controller`, 
 
 ```php
-class Resource extends yidas\rest\Controller {}
+class Resource extends nueip\rest\Controller {}
 ```
 
 2. Add and implement action methods referring by [Build Methods](#build-methods).
@@ -179,7 +179,7 @@ $route['resource_name/(:any)'] = '[Controller]/route/$1';
 RESOURCE CONTROLLERS
 --------------------
  
-The base RESTful API controller is `yidas\rest\Controller`, the following table is the actions handled by resource controller, the `action` refers to `CI_Controller`'s action name which you could override:
+The base RESTful API controller is `nueip\rest\Controller`, the following table is the actions handled by resource controller, the `action` refers to `CI_Controller`'s action name which you could override:
 
 |HTTP Method|URI (Routes Setting) |Action   |Description                                    |
 |:----------|:--------------------|:--------|:----------------------------------------------|
@@ -196,7 +196,7 @@ The base RESTful API controller is `yidas\rest\Controller`, the following table 
 
 ### Build Methods:
 
-You could make a resource controller by referring the [Template of Resource Controller](https://github.com/yidas/codeigniter-rest/blob/dev/examples/RestController.php).
+You could make a resource controller by referring the [Template of Resource Controller](https://github.com/nueip/codeigniter-rest/blob/dev/examples/RestController.php).
 
 The following RESTful controller methods could be add by your need. which each method refers to the action of Resource Controller table by default, and injects required arguments:
 
@@ -229,7 +229,7 @@ protected $routes = [
 You could override it to define your own routes while creating a resource controller:
 
 ```php
-class ApiController extends yidas\rest\Controller {
+class ApiController extends nueip\rest\Controller {
 
     protected $routes = [
         'index' => 'find',
@@ -259,7 +259,7 @@ protected boolean _setBehavior(string $action, callable $function)
 
 *Example:*
 ```php
-class BaseRestController extends \yidas\rest\Controller
+class BaseRestController extends \nueip\rest\Controller
 {
     function __construct() 
     {
@@ -318,7 +318,7 @@ JSON Result:
 HTTP REQUEST
 ------------
 
-The PSR-7 request component `yidas\http\request` is preloaded into `yidas\rest\Controller`, which provides input handler and HTTP Authentication. You could call it by `$this->request` in controller class.
+The PSR-7 request component `nueip\http\request` is preloaded into `nueip\rest\Controller`, which provides input handler and HTTP Authentication. You could call it by `$this->request` in controller class.
 
 ### Usage
 
@@ -367,7 +367,7 @@ $b64token = $this->request->getAuthCredentialsWithBearer();
 HTTP RESPONSE
 -------------
 
-The PSR-7 response component `yidas\http\response` is preloaded into `yidas\rest\Controller`, which provides output handler and formatter. You could call it by `$this->response` in controller class.
+The PSR-7 response component `nueip\http\response` is preloaded into `nueip\rest\Controller`, which provides output handler and formatter. You could call it by `$this->response` in controller class.
 
 ### Usage
 
@@ -394,7 +394,7 @@ public self setFormat(string $format)
 
 *Example:*
 ```php
-$this->response->setFormat(\yidas\http\Response::FORMAT_JSON);
+$this->response->setFormat(\nueip\http\Response::FORMAT_JSON);
 ```
 
 #### setData()

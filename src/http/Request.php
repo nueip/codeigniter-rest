@@ -1,6 +1,6 @@
 <?php
 
-namespace yidas\http;
+namespace nueip\http;
 
 /**
  * Request Component
