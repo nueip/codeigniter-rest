@@ -1,5 +1,5 @@
 {
-    "name": "yidas/codeigniter-rest",
+    "name": "nueip/codeigniter-rest",
     "description": "CodeIgniter 3 RESTful API Resource Base Controller",
     "keywords": ["codeIgniter", "api", "controller", "authorization"],
     "homepage": "https://github.com/yidas/codeigniter-rest",
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "yidas\\": "src/"
+            "nueip\\": "src/"
         }
     }
 }

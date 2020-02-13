@@ -1,9 +1,9 @@
 <?php
 
-namespace yidas\rest;
+namespace nueip\rest;
 
-use yidas\http\Request;
-use yidas\http\Response;
+use nueip\http\Request;
+use nueip\http\Response;
 
 /**
  * RESTful API Controller
@@ -16,7 +16,7 @@ use yidas\http\Response;
  * 
  * Controller extending:
  * ```php
- * class My_controller extends yidas\rest\Controller {}
+ * class My_controller extends nueip\rest\Controller {}
  * ```
  * 
  * Route setting:
@@ -62,7 +62,7 @@ class Controller extends \CI_Controller
     /**
      * Pre-setting format
      * 
-     * @var string yidas\http\Response format
+     * @var string nueip\http\Response format
      */
     protected $format;
 
@@ -74,12 +74,12 @@ class Controller extends \CI_Controller
     protected $bodyFormat = false;
 
     /**
-     * @var object yidas\http\Request;
+     * @var object nueip\http\Request;
      */
     protected $request;
 
     /**
-     * @var object yidas\http\Response;
+     * @var object nueip\http\Response;
      */
     protected $response;
     
